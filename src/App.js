@@ -1,44 +1,24 @@
-function Item({ name, isPacked }) {
-    // if (isPacked) {
-    //    return <li className="item">{name} ✅</li>
-    // }
-    // else
-    // {
-    //     return <li className="item">{name}</li>;
-    // }
-    // return (
-    //     <li className="item">
-    //         {isPacked ?
-    //
-    //             ( <del> { name + " ✅"}  </del>   )
-    //             :
-    //             (
-    //              <b> {name} </b>
-    //             )
-    //
-    //         }
-    //     </li>
-    // )
-    return (
-    <li className="item">
-        {name} { isPacked && '✅' }
-    </li>
-    )
+
+// mutation
+function Cup({guest}) {
+    return <h2>Tea Cup for guest #{guest}</h2>
+}
+export default function TeaGathering() {
+    let cups = [];
+    for (let i = 1; i <= 10; i++) {
+        cups.push(<Cup guest={i} />);
+    }
+    return cups;
 }
 
-export default function App() {
-    return (
-        <section>
-            <h1>
-             Manar Ride's Packing List
-            </h1>
-            <ul>
-                <Item name="Pants" isPacked={true} />
-                <Item name="Jacket" isPacked={false} />
-                <Item name="Shoes" isPacked={true} />
-                <Item name="Hat" isPacked={false} />
-                <Item name="Sunglasses" isPacked={true} />
-            </ul>
-        </section>
-    )
-}
+/*
+*
+https://react.dev/learn/keeping-components-pure
+*
+https://react.dev/learn/rendering-lists
+* */
+
+/*
+
+https://preview.colorlib.com/theme/snipp/
+* */
