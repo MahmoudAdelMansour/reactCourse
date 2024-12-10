@@ -1,24 +1,19 @@
-
-// mutation
-function Cup({guest}) {
-    return <h2>Tea Cup for guest #{guest}</h2>
-}
-export default function TeaGathering() {
-    let cups = [];
-    for (let i = 1; i <= 10; i++) {
-        cups.push(<Cup guest={i} />);
-    }
-    return cups;
+export default function Button() {
+    return (
+        <button
+            onClick={() => {alert('Hello, World!')}}
+            onMouseEnter={ () => {alert('Mouse is over the button')}}
+        >
+           Thing
+        </button>
+    );
 }
 
-/*
-*
-https://react.dev/learn/keeping-components-pure
-*
-https://react.dev/learn/rendering-lists
-* */
+// Declare a function called handleClick inside your Button component. [Done]
+// Implement the logic inside that function (use alert to show the message). [Done]
+// Add onClick={handleClick} to the <button> JSX.
 
-/*
+//
 
-https://preview.colorlib.com/theme/snipp/
-* */
+// https://react.dev/learn/understanding-your-ui-as-a-tree
+// https://www.youtube.com/
