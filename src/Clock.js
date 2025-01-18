@@ -1,7 +1,8 @@
-export default function Clock({ color, time }) {
+export default function Clock({ time }) {
     return (
-        <h1 style={{ color: color }}>
-            {time}
-        </h1>
+        <>
+            <h1>{time}</h1>
+            <input />
+        </>
     );
 }
